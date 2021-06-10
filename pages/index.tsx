@@ -11,6 +11,8 @@ export default function Home() {
     <div className="bg-black">
       <Head>
         <title>Sheth Shreyansh</title>
+        <meta name="description" content="Web Devloper , Content Writer"></meta>
+        <meta name="author" content="Shreyansh Sheth"></meta>
       </Head>
       <nav className="flex justify-end m-10 text-lg">
         <Link href="/blog" prefetch={true}>
@@ -33,7 +35,7 @@ export default function Home() {
             <button
               onClick={() => {
                 let EmailAddress = "ShreyanshSheth777@gmail.com";
-
+                //@ts-ignore
                 document.location = "mailto:" + EmailAddress;
               }}
               className="bg-primary sm:mt-16 focus:outline-none text-black md:mt-30 p-3 px-6 font-semibold"
