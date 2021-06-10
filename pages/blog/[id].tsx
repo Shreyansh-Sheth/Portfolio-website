@@ -1,0 +1,91 @@
+import { iBlogPost } from "../../src/interfaces/blogList";
+import fs from "fs";
+import path from "path";
+import { Params } from "next/dist/next-server/server/router";
+import matter from "gray-matter";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import renderToString from "next-mdx-remote/render-to-string";
+//@ts-ignore
+import mdxPrism from "mdx-prism";
+import hydrate from "next-mdx-remote/hydrate";
+import { MdxRemote } from "next-mdx-remote/types";
+import { IoIosArrowBack } from "react-icons/io";
+export default function blogPostPage({
+  meta,
+  content,
+}: {
+  meta: iBlogPost;
+  content: MdxRemote.Source;
+}) {
+  const router = useRouter();
+  const article = hydrate(content);
+  return (
+    <>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css"
+          integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
+          crossOrigin="anonymous"
+        />
+      </Head>
+
+      <header className="rounded-xl md:ml-8 ml-1 pl-3 pt-2 flex justify-between">
+        <div
+          className="cursor-pointer"
+          onClick={() => {
+            router.back();
+          }}
+        >
+          <IoIosArrowBack className="text-white  text-3xl mb-5"></IoIosArrowBack>
+        </div>
+        <div className="md:mr-8 mr-1 pr-3">{meta.time}</div>
+      </header>
+      <div className="md:mx-8 mx-1  rounded-xl px-3 pb-3 bg-gray-800 ">
+        <div className="pb-4">
+          <div className="md:text-6xl text-3xl font-black ">{meta.title}</div>
+          <div className="md:text-xl text-lg font-semibold mt-2">
+            {meta.subTitle}
+          </div>
+        </div>
+        <article className="bg-white p-5 m-auto rounded-xl prose-xl text-black ">
+          {article}
+        </article>
+        <div className="font-light mt-5">Author:{meta.author}</div>
+      </div>
+    </>
+  );
+}
+
+export async function getStaticProps({ params }: Params) {
+  const id = params.id;
+  const filePath = path.join(process.cwd(), "/src/blogs", `${id}.mdx`);
+  const file = fs.readFileSync(filePath);
+  const { data, content } = matter(file);
+  const contentData = await renderToString(content, {
+    mdxOptions: {
+      remarkPlugins: [
+        require("remark-autolink-headings"),
+        require("remark-slug"),
+        require("remark-code-titles"),
+        require("remark-emoji"),
+      ],
+      rehypePlugins: [mdxPrism],
+    },
+  });
+  return {
+    props: { slug: id, meta: data, content: contentData },
+  };
+}
+export function getStaticPaths() {
+  const folderPath = path.join(process.cwd(), "/src/blogs");
+  const paths: { params: { id: string } }[] = [];
+  fs.readdirSync(folderPath).forEach((file) => {
+    paths.push({ params: { id: file.replace(".mdx", "") } });
+  });
+  return {
+    paths,
+    fallback: false,
+  };
+}

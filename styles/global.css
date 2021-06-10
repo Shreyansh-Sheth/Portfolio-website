@@ -1,0 +1,16 @@
+@tailwind base;
+
+@tailwind components;
+
+.h-screen80 {
+  height: 80vh;
+}
+@tailwind utilities;
+
+body {
+  background-color: black;
+  color: #fff;
+}
+body {
+  @apply font-sans;
+}
