@@ -32,6 +32,10 @@ export default function blogPostPage({
         <meta name="description" content={meta.title}></meta>
         <meta name="author" content={meta.author}></meta>
         <meta name="keywords" content={meta.tags.toString()}></meta>
+        <meta property="og:site_name" content="Sheth Shreyansh"></meta>
+        <meta property="og:title" content={meta.title}></meta>
+        <meta property="og:description" content={meta.subTitle}></meta>
+        <meta property="og:type" content="article"></meta>
       </Head>
 
       <header className="rounded-xl md:ml-8 ml-1 pl-3 pt-2 flex justify-between">
@@ -43,21 +47,25 @@ export default function blogPostPage({
         >
           <IoIosArrowBack className="text-white  text-3xl mb-5"></IoIosArrowBack>
         </div>
-        <div className="md:mr-8 mr-1 pr-3">{meta.time}</div>
+        <div>
+          <div className="md:mr-8 mr-1 pr-3 font-light">{meta.time}</div>
+          <div className="md:mr-8 mr-1 pr-3 font-light">
+            Author : {meta.author}
+          </div>
+        </div>
       </header>
       <div className="md:mx-8 mx-1  rounded-xl px-3 pb-3 bg-gray-800 ">
         <div className="pb-4">
-          <div className="md:text-5xl text-center text-3xl font-black ">
+          <div className="md:text-5xl pt-2 text-center text-3xl font-black ">
             {meta.title}
           </div>
-          <div className="md:text-3xl text-lg text-center font-light mt-2">
-            {meta.subTitle}
+          <div className="md:text-3x italic text-lg text-center font-light mt-2">
+            "{meta.subTitle}"
           </div>
         </div>
-        <article className="bg-white p-5 m-auto rounded-xl prose-blue porse prose-sm lg:prose-lg xl:prose-xl text-black ">
+        <article className="bg-gray-700 px-5 py-3 md:mx-16 m-auto rounded-xl prose-blue porse prose-sm lg:prose-lg  text-white ">
           {article}
         </article>
-        <div className="font-light mt-5">Author:{meta.author}</div>
       </div>
     </>
   );

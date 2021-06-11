@@ -20,7 +20,7 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
             </p>
           </Link>
         </nav>
-        <header className="text-xl sm:text-3xl m-5 font-bold">
+        <header className="text-3xl sm:text-4xl md:text-5xl italic mb-10 m-5 font-bold">
           Welcome To My Blog
         </header>
         <main>
@@ -36,22 +36,22 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
                     <div
                       onClick={(e) => {}}
                       key={idx}
-                      className="text-white m-auto my-5 p-3 cursor-pointer transition duration-500 ease-in-out rounded-md hover:bg-gray-900 bg-gray-800 w-9/12"
+                      className="p-5 cursor-pointer hover:border-gray-300 border-white border-2 bg-gray-700 hover:bg-gray-900 transition duration-500 ease-in-out  block  rounded-md my-5 md:mx-20 mx-2"
                     >
-                      <div className="text-lg sm:text-2xl font-semibold">
+                      <div className="text-left capitalize sm:text-3xl font-bold text-2xl ">
                         {e.title}
                       </div>
-                      <div className="text-left text-base sm:text-base">
+                      <div className="text-left capitalize font-semibold mr-2 text-sm sm:text-2xl">
                         {e.subTitle}
                       </div>
-                      <div className="text-sm my-3">
+                      <div className="text-left text-sm mt-2  break-all">
                         {e.tags.map((e, idx) => {
                           return (
                             <span
                               onClick={(c) => {
                                 //add function when click on here it will automatically search for that tag in search box
                               }}
-                              className="pr-1  py-0.5 bg-white rounded-sm mr-2 text-black"
+                              className="mr-2 bg-gray-600  rounded-md capitalize p-1 "
                               key={idx}
                             >
                               #{e}

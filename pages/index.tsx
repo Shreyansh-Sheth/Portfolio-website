@@ -5,6 +5,14 @@ import ProjectTab from "../src/components/ProjectTab";
 import Technology from "../src/components/Technology";
 import projectList from "../src/config/projectList";
 import TechList from "../src/config/techList";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import Typed from "react-typed";
+import {
+  VscChromeMaximize,
+  VscChromeClose,
+  VscChromeMinimize,
+} from "react-icons/vsc";
+import cmdList from "../src/config/cmdList";
 
 export default function Home() {
   return (
@@ -20,8 +28,8 @@ export default function Home() {
         </Link>
       </nav>
 
-      <header className="h-screen80 mt-32 sm:mt-40 align-middle">
-        <div className="m-5 flex-col space-y-4">
+      <header className="lg:flex lg:justify-between max-h-full lg:mt-32  md:mt-40 align-middle ">
+        <div className="m-5 flex-col space-y-4 ">
           <p className="sm:text-6xl text-3xl font-bold ">Hello!</p>
           <p className="sm:text-6xl text-3xl font-bold">
             My Name Is{" "}
@@ -29,7 +37,9 @@ export default function Home() {
               Shreyansh Sheth
             </span>
           </p>
-          <p className=" text-lg">I'm a full-stack web devloper.</p>
+          <p className=" text-lg font-semibold italic ">
+            Full-Stack Web Devloper.
+          </p>
 
           <div>
             <button
@@ -38,18 +48,56 @@ export default function Home() {
                 //@ts-ignore
                 document.location = "mailto:" + EmailAddress;
               }}
-              className="bg-primary sm:mt-16 focus:outline-none text-black md:mt-30 p-3 px-6 font-semibold"
+              className="text-xl bg-primary sm:mt-16 focus:outline-none text-black md:mt-30 p-3 px-6 font-semibold"
             >
               Contact Me
             </button>
           </div>
         </div>
+        <div className="block w-11/12 mx-auto lg:w-1/3 lg:mr-24 h-56 mb-20 md:mt-10 lg:mt-auto lg:h-96  sm:h-60 sm:mb-5 lg:mb-36 ">
+          <div className="flex justify-end text-xl border-4 border-white border-b-0">
+            <VscChromeMinimize></VscChromeMinimize>
+            <VscChromeMaximize></VscChromeMaximize>
+            <VscChromeClose></VscChromeClose>
+          </div>
+          <div
+            style={{ fontFamily: "VT323 , monospace" }}
+            className="border-4 text-2xl border-white rounded-sm p-2 h-2/3  text-primary"
+          >
+            {"👨‍💻:\\Love>"}{" "}
+            <Typed
+              strings={cmdList}
+              typeSpeed={40}
+              backSpeed={30}
+              loop={true}
+            ></Typed>
+          </div>
+        </div>
       </header>
+      <div className="fixed -right-20   group bottom-9 z-50 ">
+        <a
+          target="_blank"
+          className="flex justify-evenly bg-gray-500 hover:bg-gray-700 p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
+          href="https://github.com/Shreyansh-Sheth"
+        >
+          <AiFillGithub className="text-white text-3xl"></AiFillGithub>
+          <p className="capitalize pl-3 font-semibold align-bottom  ">github</p>
+        </a>
+        <a
+          target="_blank"
+          className="flex justify-evenly bg-gray-500 hover:bg-gray-700 p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
+          href="https://www.linkedin.com/in/shreyansh-sheth/"
+        >
+          <AiFillLinkedin className="text-white text-3xl"></AiFillLinkedin>
+          <p className="capitalize pl-3  font-semibold align-bottom">LinkdIn</p>
+        </a>
+      </div>
       <main>
-        <div className="text-center ">
-          <p className="sm:text-5xl mb-5 text-4xl font-semibold capitalize">
+        <div className="text-center mt-5">
+          <p className="sm:text-5xl mb-9 italic  text-4xl font-semibold capitalize">
             My Projects
           </p>
+
           <div>
             {projectList.map((e, idx) => {
               return (
@@ -70,6 +118,7 @@ export default function Home() {
           <p className="sm:text-5xl text-4xl font-semibold capitalize">
             Technologies I Know And Love
           </p>
+
           <div className="mt-9 grid md:grid-cols-3 grid-cols-1 gap-4">
             {TechList.map((e, idx) => (
               <Technology

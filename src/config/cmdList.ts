@@ -1,0 +1,28 @@
+const cmdList = [
+  "npm run Hey👋",
+  "Nice To Meet You 🤝",
+  "My Name Is Shreyansh",
+  "Let Me Give You Qeik",
+  "Let Me Give You Quik Introduction About Me.",
+  "I'm currently studying📚 computer engineer bachelor degree in ganpath university",
+  "I'm Full Stack Web Devloper",
+  "Who Build Projects For Fun😋",
+  "Who Build Projects For Knowledge",
+  "I know React.js,Next.js",
+  "I know Typescript,Javascript,Node",
+  "I know Html5,Css3",
+  "My Programming journy begin when i'm in 11th standard.",
+  "In our curriculum there is one chapter called java.",
+  "I got into that chapter for whole semester.",
+  "And then i start learning web devlopment thanks to youtube.",
+  "After That So much Things Happen",
+  "And Now i'm talking to you😅",
+  "Btw I love making friends🤩",
+  "So hit me up with email just to say hii!!👋",
+  "Btw whats your favourite color?",
+  "Mine is Green",
+  "Byyyyyy💓",
+  "Peace✌",
+];
+
+export default cmdList;
