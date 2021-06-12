@@ -10,7 +10,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="En">
         <Head>
           <link
             rel="preconnect"
@@ -23,8 +23,9 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           />
           <link
+            rel="preload"
+            as="style"
             href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
-            rel="stylesheet"
           ></link>
         </Head>
         <body>

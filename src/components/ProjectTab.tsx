@@ -12,6 +12,7 @@ export default function ProjectTab({
     <FadeInWhenVisible duration={0.4}>
       <a
         target="_blank"
+        rel="noopener"
         href={link}
         className="p-5 hover:border-gray-300 border-white border-2 bg-gray-900 hover:bg-black transition duration-500 ease-in-out  block  rounded-md my-5 md:mx-20 mx-2"
       >
