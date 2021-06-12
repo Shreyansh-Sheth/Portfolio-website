@@ -19,8 +19,7 @@ const cmdList = [
   "And Now i'm talking to you😅",
   "Btw I love making friends🤩",
   "So hit me up with email just to say hii!!👋",
-  "Btw whats your favourite color?",
-  "Mine is Green",
+  "Or we can Talk About video games too 🎮",
   "Byyyyyy💓",
   "Peace✌",
 ];

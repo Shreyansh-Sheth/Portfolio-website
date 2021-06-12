@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="bg-black">
       <Head>
-        <title>Sheth Shreyansh</title>
+        <title>Shreyansh Sheth</title>
         <meta name="description" content="Web Devloper , Content Writer"></meta>
         <meta name="author" content="Shreyansh Sheth"></meta>
       </Head>
@@ -77,7 +77,7 @@ export default function Home() {
       <div className="fixed -right-20   group bottom-9 z-50 ">
         <a
           target="_blank"
-          className="flex justify-evenly bg-gray-500 hover:bg-gray-700 p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
+          className="flex justify-evenly border-black hover:border-white border-2 bg-gray-500 hover:bg-gray-700 p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
           href="https://github.com/Shreyansh-Sheth"
         >
           <AiFillGithub className="text-white text-3xl"></AiFillGithub>
@@ -85,7 +85,7 @@ export default function Home() {
         </a>
         <a
           target="_blank"
-          className="flex justify-evenly bg-gray-500 hover:bg-gray-700 p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
+          className="flex justify-evenly bg-gray-500 border-black hover:border-white border-2 hover:bg-gray-700 p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
           href="https://www.linkedin.com/in/shreyansh-sheth/"
         >
           <AiFillLinkedin className="text-white text-3xl"></AiFillLinkedin>
