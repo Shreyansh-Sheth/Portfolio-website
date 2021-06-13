@@ -20,7 +20,7 @@ export default function ProjectTab({
           {heading}
         </div>
         <div className="flex justify-between ">
-          <div className="text-left capitalize font-semibold mr-2 text-sm sm:text-2xl">
+          <div className="text-left capitalize font-semibold mr-2 text-sm sm:text-xl">
             {subText}.
           </div>
           <div className="md:inline hidden text-sm pl-2 text-blue-200 italic">

@@ -44,7 +44,7 @@ export default function Home() {
           <div>
             <button
               onClick={() => {
-                let EmailAddress = "ShreyanshSheth777@gmail.com";
+                let EmailAddress = "shethshreyansh777@gmail.com";
                 //@ts-ignore
                 document.location = "mailto:" + EmailAddress;
               }}
