@@ -30,15 +30,15 @@ export default function Home() {
 
       <header className="lg:flex lg:justify-between max-h-full lg:mt-32  md:mt-40 align-middle ">
         <div className="m-5 flex-col space-y-4 ">
-          <p className="sm:text-6xl text-3xl font-bold ">Hello!</p>
+          <p className="sm:text-5xl text-2xl font-bold ">Hello 👋</p>
           <p className="sm:text-6xl text-3xl font-bold">
             My Name Is{" "}
             <span className="text-primary block whitespace-pre-wrap">
               Shreyansh Sheth
             </span>
           </p>
-          <p className=" text-lg font-semibold italic ">
-            Full-Stack Web Devloper.
+          <p className=" text-lg capitalize font-semibold italic ">
+            I'm a Full-Stack Web Devloper.
           </p>
 
           <div>
@@ -74,32 +74,35 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <div className="fixed -right-20    group bottom-9 z-50 ">
+      <div className="fixed -right-20 group bottom-9 z-50 ">
         <a
           target="_blank"
           rel="noopener"
-          className="flex justify-evenly border-black hover:border-white border-2 bg-gray-500 hover:bg-gray-700 p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
+          className="flex justify-evenly border-black border-2 text-black bg-primary  p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
           href="https://github.com/Shreyansh-Sheth"
         >
-          <AiFillGithub className="text-white text-3xl"></AiFillGithub>
-          <p className="capitalize pl-3 font-semibold align-bottom  ">github</p>
+          <AiFillGithub className=" text-3xl"></AiFillGithub>
+          <p className="capitalize pl-3  font-semibold align-bottom  ">
+            github
+          </p>
         </a>
         <a
           target="_blank"
           rel="noopener"
-          className="flex justify-evenly bg-gray-500 border-black hover:border-white border-2 hover:bg-gray-700 p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
+          className="flex justify-evenly border-black  border-2  text-black bg-primary  p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
           href="https://www.linkedin.com/in/shreyansh-sheth/"
         >
-          <AiFillLinkedin className="text-white text-3xl"></AiFillLinkedin>
+          <AiFillLinkedin className=" text-3xl"></AiFillLinkedin>
           <p className="capitalize pl-3  font-semibold align-bottom">LinkdIn</p>
         </a>
       </div>
       <main>
-        <div className="text-center mt-5">
-          <p className="sm:text-5xl mb-9 italic  text-4xl font-semibold capitalize">
-            My Projects
-          </p>
-
+        <div className=" mt-5">
+          <FadeInWhenVisible duration={0.3}>
+            <p className="sm:text-5xl  italic  p-5 my-5 md:mx-20 mx-2  text-4xl font-semibold capitalize">
+              My Work
+            </p>
+          </FadeInWhenVisible>
           <div>
             {projectList.map((e, idx) => {
               return (
@@ -116,10 +119,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-center  sm:mt-32 mt-10">
-          <p className="sm:text-5xl text-4xl font-semibold capitalize">
-            Technologies I Know And Love
-          </p>
+        <div className="  sm:mt-32 mt-10">
+          <FadeInWhenVisible duration={0.3}>
+            <p className="sm:text-5xl  italic  p-5 my-5 md:mx-20 mx-2  text-4xl font-semibold capitalize">
+              Skills
+            </p>
+          </FadeInWhenVisible>
 
           <div className="mt-9 grid md:grid-cols-3 grid-cols-1 gap-4">
             {TechList.map((e, idx) => (

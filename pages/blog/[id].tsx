@@ -21,7 +21,7 @@ export default function blogPostPage({
   const router = useRouter();
   const article = hydrate(content);
   return (
-    <>
+    <div className="bg-gray-900">
       <Head>
         <title>{meta.title}</title>
         <link
@@ -39,7 +39,7 @@ export default function blogPostPage({
         <meta property="og:type" content="article"></meta>
       </Head>
 
-      <header className="rounded-xl md:ml-8 ml-1 pl-3 pt-2 flex justify-between">
+      <header className="rounded-xl md:ml-8 ml-1 pl-3 pt-2 flex justify-between ">
         <div
           className="cursor-pointer"
           onClick={() => {
@@ -66,7 +66,7 @@ export default function blogPostPage({
           <div className="font-semibold">Author : {meta.author}</div>
         </article>
       </div>
-    </>
+    </div>
   );
 }
 

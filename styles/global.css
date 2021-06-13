@@ -8,9 +8,5 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
   color: #fff;
-}
-body {
-  @apply font-sans;
 }

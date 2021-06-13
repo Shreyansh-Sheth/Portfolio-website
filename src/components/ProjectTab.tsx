@@ -9,12 +9,12 @@ export default function ProjectTab({
   tech,
 }: iProjects) {
   return (
-    <FadeInWhenVisible duration={0.4}>
+    <FadeInWhenVisible duration={0.3}>
       <a
         target="_blank"
         rel="noopener"
         href={link}
-        className="p-5 hover:border-gray-300 border-white border-2 bg-gray-800 hover:bg-black transition duration-500 ease-in-out  block  rounded-md my-5 md:mx-20 mx-2"
+        className="p-5 my-5 md:mx-20 mx-2 group hover:border-primary  border-2 border-transparent  bg-indigo-900  hover:bg-blue-900 transition duration-500 ease-in-out  block  rounded-md "
       >
         <div className="text-left capitalize sm:text-3xl font-bold text-2xl ">
           {heading}
@@ -33,7 +33,7 @@ export default function ProjectTab({
         <div className="text-left text-sm mt-2  break-all">
           {tech.map((e, i) => (
             <span
-              className="mr-2 bg-gray-600  rounded-md capitalize p-1 "
+              className="mr-2 bg-blue-300 text-black rounded-md capitalize p-1 "
               key={i}
             >
               {e}

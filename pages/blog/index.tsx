@@ -21,7 +21,7 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
             </p>
           </Link>
         </nav>
-        <header className="text-3xl sm:text-4xl md:text-5xl italic mb-10 m-5 font-bold">
+        <header className="sm:text-5xl  italic  p-5 my-5 md:mx-20 mx-2  text-4xl font-semibold capitalize">
           Welcome To My Blog
         </header>
         <main>
