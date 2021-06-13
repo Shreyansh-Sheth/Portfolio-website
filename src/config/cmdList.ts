@@ -4,7 +4,7 @@ const cmdList = [
   "My Name Is Shreyansh",
   "Let Me Give You Qeik",
   "Let Me Give You Quik Introduction About Me.",
-  "I'm currently studying📚 computer engineer bachelor degree in ganpath university",
+  "I'm currently studying📚 computer engineer bachelor degree in ganpat university",
   "I'm Full Stack Web Devloper",
   "Who Build Projects For Fun😋",
   "Who Build Projects For Knowledge",

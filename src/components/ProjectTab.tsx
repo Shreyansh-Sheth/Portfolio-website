@@ -14,7 +14,7 @@ export default function ProjectTab({
         target="_blank"
         rel="noopener"
         href={link}
-        className="p-5 hover:border-gray-300 border-white border-2 bg-gray-900 hover:bg-black transition duration-500 ease-in-out  block  rounded-md my-5 md:mx-20 mx-2"
+        className="p-5 hover:border-gray-300 border-white border-2 bg-gray-800 hover:bg-black transition duration-500 ease-in-out  block  rounded-md my-5 md:mx-20 mx-2"
       >
         <div className="text-left capitalize sm:text-3xl font-bold text-2xl ">
           {heading}

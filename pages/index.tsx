@@ -16,13 +16,13 @@ import cmdList from "../src/config/cmdList";
 
 export default function Home() {
   return (
-    <div className="bg-black">
+    <div className="bg-gray-900">
       <Head>
         <title>Shreyansh Sheth</title>
         <meta name="description" content="Web Devloper , Content Writer"></meta>
         <meta name="author" content="Shreyansh Sheth"></meta>
       </Head>
-      <nav className="flex justify-end m-10 text-lg">
+      <nav className="flex justify-end mx-10 mb-10 pt-10 text-lg">
         <Link href="/blog" prefetch={true}>
           <p className="underline cursor-pointer sm:text-2xl text-lg">Blog</p>
         </Link>
@@ -54,27 +54,27 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="block w-11/12 mx-auto lg:w-1/3 lg:mr-24 h-56 mb-20 md:mt-10 lg:mt-auto lg:h-96  sm:h-60 sm:mb-5 lg:mb-36 ">
-          <div className="flex justify-end text-xl border-4 border-white border-b-0">
+        <div className="block w-11/12 mx-auto  lg:w-1/3 lg:mr-24 h-56 mb-20 md:mt-10 lg:mt-auto lg:h-96  sm:h-60 sm:mb-5 lg:mb-36 ">
+          <div className="flex justify-end text-xl bg-black border-4 border-white border-b-0">
             <VscChromeMinimize></VscChromeMinimize>
             <VscChromeMaximize></VscChromeMaximize>
             <VscChromeClose></VscChromeClose>
           </div>
           <div
             style={{ fontFamily: "VT323 , monospace" }}
-            className="border-4 text-2xl border-white rounded-sm p-2 h-2/3  text-primary"
+            className="border-4 text-lg md:text-2xl bg-black border-white rounded-sm p-2 h-2/3  text-primary "
           >
             {"👨‍💻:\\Love>"}{" "}
             <Typed
               strings={cmdList}
-              typeSpeed={40}
-              backSpeed={30}
+              typeSpeed={30}
+              backSpeed={20}
               loop={true}
             ></Typed>
           </div>
         </div>
       </header>
-      <div className="fixed -right-20   group bottom-9 z-50 ">
+      <div className="fixed -right-20    group bottom-9 z-50 ">
         <a
           target="_blank"
           rel="noopener"
@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="sm:text-2xl text-xl text-center my-28">
+      <footer className="sm:text-2xl text-xl text-center py-28 pb-20">
         Made With <span className="text-red-700">♥</span> By Shreyansh Sheth
       </footer>
     </div>

@@ -49,10 +49,7 @@ export default function blogPostPage({
           <IoIosArrowBack className="text-white  text-3xl mb-5"></IoIosArrowBack>
         </div>
         <div>
-          <div className="md:mr-8 mr-1 pr-3 font-light">{meta.time}</div>
-          <div className="md:mr-8 mr-1 pr-3 font-light">
-            Author : {meta.author}
-          </div>
+          <div className="md:mr-8 mr-1 pr-3 font-semibold">{meta.time}</div>
         </div>
       </header>
       <div className="md:mx-8 mx-1  rounded-xl px-3 pb-3 bg-gray-800 ">
@@ -66,6 +63,7 @@ export default function blogPostPage({
         </div>
         <article className="bg-gray-700 px-5 py-3 md:mx-16 m-auto rounded-xl prose-blue porse prose-sm lg:prose-lg  text-white ">
           {article}
+          <div className="font-semibold">Author : {meta.author}</div>
         </article>
       </div>
     </>

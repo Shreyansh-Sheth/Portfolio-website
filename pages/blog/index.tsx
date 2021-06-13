@@ -13,8 +13,8 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
         <meta name="author" content="Sheth Shreyansh"></meta>
         <title>Shreyansh Sheth</title>
       </Head>
-      <div className="bg-black">
-        <nav className="flex justify-end m-10 text-lg">
+      <div className="bg-gray-900 h-screen">
+        <nav className="flex justify-end mx-10 mb-10 pt-10 text-lg">
           <Link href="/" prefetch={true}>
             <p className="underline cursor-pointer sm:text-2xl text-lg">
               Portfolio
@@ -37,7 +37,7 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
                     <div
                       onClick={(e) => {}}
                       key={idx}
-                      className="p-5 cursor-pointer hover:border-gray-300 border-white border-2 bg-gray-700 hover:bg-gray-900 transition duration-500 ease-in-out  block  rounded-md my-5 md:mx-20 mx-2"
+                      className="p-5 cursor-pointer  border-gray-600 border-2 bg-blue-900 hover:shadow-lg hover:border-white transition duration-500 ease-in-out  block  rounded-md my-5 md:mx-20 mx-2"
                     >
                       <div className="text-left capitalize sm:text-3xl font-bold text-2xl ">
                         {e.title}
@@ -52,7 +52,7 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
                               onClick={(c) => {
                                 //add function when click on here it will automatically search for that tag in search box
                               }}
-                              className="mr-2 bg-gray-600  rounded-md capitalize p-1 "
+                              className="mr-2 bg-blue-600  rounded-md capitalize p-1 "
                               key={idx}
                             >
                               #{e}
@@ -80,7 +80,6 @@ export const getStaticProps = () => {
       "utf8"
     );
     const { data } = matter(fileContents);
-    console.log(data.tags);
     blogList.blogPosts.push(data as iBlogPost);
   });
 
