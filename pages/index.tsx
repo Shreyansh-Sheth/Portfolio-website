@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import FadeInWhenVisible from "../src/components/FadeInAnimation";
 import ProjectTab from "../src/components/ProjectTab";
-import Technology from "../src/components/Technology";
 import projectList from "../src/config/projectList";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Typed from "react-typed";
