@@ -4,7 +4,6 @@ import FadeInWhenVisible from "../src/components/FadeInAnimation";
 import ProjectTab from "../src/components/ProjectTab";
 import Technology from "../src/components/Technology";
 import projectList from "../src/config/projectList";
-import TechList from "../src/config/techList";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Typed from "react-typed";
 import {
@@ -13,6 +12,8 @@ import {
   VscChromeMinimize,
 } from "react-icons/vsc";
 import cmdList from "../src/config/cmdList";
+import SkillTab from "../src/components/SkillsTab";
+import SkillList from "../src/config/SkillList";
 
 export default function Home() {
   return (
@@ -126,14 +127,14 @@ export default function Home() {
             </p>
           </FadeInWhenVisible>
 
-          <div className="mt-9 grid md:grid-cols-3 grid-cols-1 gap-4">
-            {TechList.map((e, idx) => (
-              <Technology
-                link={e.link}
+          <div className="mt-9 grid lg:grid-cols-3 grid-cols-1 md:mx-20 mx-2 md:gap-10 gap-4">
+            {SkillList.map((e, i) => (
+              <SkillTab
                 name={e.name}
-                stars={e.stars}
-                key={idx}
-              ></Technology>
+                percentage={e.percentage}
+                link={e.link}
+                key={i}
+              ></SkillTab>
             ))}
           </div>
         </div>

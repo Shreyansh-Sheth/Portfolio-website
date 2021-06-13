@@ -1,5 +1,5 @@
 export default interface iSkill {
   name: string;
-  percentage: string;
-  link: string;
+  percentage: number;
+  link?: string;
 }

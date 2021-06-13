@@ -1,12 +1,27 @@
+import { m } from "framer-motion";
 import iProjects from "../interfaces/projects";
 
 const projectList: iProjects[] = [
+  {
+    heading: "Portfolio Website",
+    tech: ["Next.js", "Tailwindcss"],
+    link: "https://github.com/Shreyansh-Sheth/quize",
+    status: "Completed",
+    subText: "Static Website For My Portfolio",
+  },
   {
     heading: "Esports",
     tech: ["firebase", "Next.js", "TypeScript"],
     link: "https://github.com/Shreyansh-Sheth/esports.git",
     subText: "Torunament & Clan Managment Web App",
     status: "Work In Progress",
+  },
+  {
+    heading: "Quizee",
+    tech: ["firebase", "Next.Js", "Typescript"],
+    link: "https://github.com/Shreyansh-Sheth/quize.git",
+    subText: "Online Multiplayer Quiz Game For Project Work At Collage",
+    status: "Completed",
   },
   {
     heading: "Article",
