@@ -38,14 +38,17 @@ export default function Home() {
 
       <header className="lg:flex lg:justify-between max-h-full lg:mt-32  md:mt-40 align-middle ">
         <div className="m-5 flex-col space-y-4 ">
-          <p className="sm:text-6xl text-3xl font-bold">
+          <div key="upper" className="sm:text-6xl text-3xl font-bold">
             <p className="sm:text-6xl text-3xl font-bold ">Hello 👋</p>
             My Name Is{" "}
             <span className="text-primary font-black  block sm:text-7xl text-4xl whitespace-pre-wrap">
               Shreyansh Sheth
             </span>
-          </p>
-          <p className="text-lg capitalize font-semibold italic ">
+          </div>
+          <p
+            key="lower"
+            className="text-sm md:text-lg capitalize font-semibold italic "
+          >
             I'm a Full-Stack Web Developer.
           </p>
 
