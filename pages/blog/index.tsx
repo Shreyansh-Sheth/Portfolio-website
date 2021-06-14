@@ -11,6 +11,10 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
       <Head>
         <meta name="description" content="Articles"></meta>
         <meta name="author" content="Sheth Shreyansh"></meta>
+        <meta property="og:title" content="Shreyansh Sheth" />
+        <meta property="og:description" content="Full-Stack Web Developer" />
+        <meta property="og:type" content="Profile" />
+
         <title>Shreyansh Sheth</title>
       </Head>
       <div className="bg-gray-900 h-screen">
