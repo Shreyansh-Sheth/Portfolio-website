@@ -19,10 +19,18 @@ export default function Home() {
     <div className="bg-gray-900">
       <Head>
         <title>Shreyansh Sheth</title>
-        <meta name="description" content="Web Devloper , Content Writer"></meta>
+        <meta
+          name="description"
+          content="Web Developer , Content Writer"
+        ></meta>
         <meta name="author" content="Shreyansh Sheth"></meta>
       </Head>
       <nav className="flex justify-end mx-10 mb-10 pt-10 text-lg">
+        <a href="/Resume.pdf" target="_blank">
+          <p className="mr-5 underline cursor-pointer sm:text-2xl text-lg">
+            Resume
+          </p>
+        </a>
         <Link href="/blog" prefetch={true}>
           <p className="underline cursor-pointer sm:text-2xl text-lg">Blog</p>
         </Link>
@@ -30,15 +38,15 @@ export default function Home() {
 
       <header className="lg:flex lg:justify-between max-h-full lg:mt-32  md:mt-40 align-middle ">
         <div className="m-5 flex-col space-y-4 ">
-          <p className="sm:text-5xl text-2xl font-bold ">Hello 👋</p>
           <p className="sm:text-6xl text-3xl font-bold">
+            <p className="sm:text-6xl text-3xl font-bold ">Hello 👋</p>
             My Name Is{" "}
-            <span className="text-primary block whitespace-pre-wrap">
+            <span className="text-primary font-black  block sm:text-7xl text-4xl whitespace-pre-wrap">
               Shreyansh Sheth
             </span>
           </p>
           <p className=" text-lg capitalize font-semibold italic ">
-            I'm a Full-Stack Web Devloper.
+            I'm a Full-Stack Web Developer.
           </p>
 
           <div>
@@ -78,7 +86,7 @@ export default function Home() {
         <a
           target="_blank"
           rel="noopener"
-          className="flex justify-evenly border-black border-2 text-black bg-primary  p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
+          className="flex justify-evenly  text-black bg-primary  p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform lg:hover:-translate-x-16 rounded-md  group"
           href="https://github.com/Shreyansh-Sheth"
         >
           <AiFillGithub className=" text-3xl"></AiFillGithub>
@@ -89,7 +97,7 @@ export default function Home() {
         <a
           target="_blank"
           rel="noopener"
-          className="flex justify-evenly border-black  border-2  text-black bg-primary  p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform hover:-translate-x-16 rounded-md  group"
+          className="flex justify-evenly   text-black bg-primary  p-3 pr-5 group mt-2 transition duration-500 ease-in-out  transform lg:hover:-translate-x-16 rounded-md  group"
           href="https://www.linkedin.com/in/shreyansh-sheth/"
         >
           <AiFillLinkedin className=" text-3xl"></AiFillLinkedin>
@@ -119,9 +127,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="  sm:mt-32 mt-10">
+        <div className="  sm:mt-32 mt-16">
           <FadeInWhenVisible duration={0.3}>
-            <p className="sm:text-5xl  italic  p-5 my-5 md:mx-20 mx-2  text-4xl font-semibold capitalize">
+            <p className="sm:text-5xl  italic  px-5 my-5 md:mx-20 mx-2  text-4xl font-semibold capitalize">
               Skills
             </p>
           </FadeInWhenVisible>

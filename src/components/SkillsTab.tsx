@@ -12,16 +12,17 @@ export default function SkillTab({ link, name, percentage }: iSkill) {
       >
         <div className="flex justify-between">
           <p className="text-left capitalize sm:text-xl font-bold text-lg">
-            {" "}
             {name}
           </p>
-          <p className="text-xl text-pink-500">{percentage}%</p>
+          <p className="text-xl  italic font-semibold text-pink-500">
+            {percentage}%
+          </p>
         </div>
         <div className=" pt-1">
           <div className="overflow-hidden h-2 mb-1 md:mb-4 text-xs flex rounded bg-pink-200">
             <div
               style={{ width: `${percentage}%` }}
-              className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"
+              className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-600"
             ></div>
           </div>
         </div>
