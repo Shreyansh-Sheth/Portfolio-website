@@ -45,7 +45,7 @@ export default function Home() {
               Shreyansh Sheth
             </span>
           </p>
-          <p className=" text-lg capitalize font-semibold italic ">
+          <p className="text-lg capitalize font-semibold italic ">
             I'm a Full-Stack Web Developer.
           </p>
 
