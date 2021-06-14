@@ -15,7 +15,7 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
       </Head>
       <div className="bg-gray-900 h-screen">
         <nav className="flex justify-end mx-10 mb-10 pt-10 text-lg">
-          <Link href="/" prefetch={true}>
+          <Link href="/">
             <p className="underline cursor-pointer sm:text-2xl text-lg">
               Portfolio
             </p>
