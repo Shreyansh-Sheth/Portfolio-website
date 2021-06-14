@@ -31,7 +31,7 @@ export default function Home() {
             Resume
           </p>
         </a>
-        <Link href="/blog" prefetch={true}>
+        <Link href="/blog">
           <p className="underline cursor-pointer sm:text-2xl text-lg">Blog</p>
         </Link>
       </nav>
