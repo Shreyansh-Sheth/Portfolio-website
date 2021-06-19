@@ -4,48 +4,48 @@ const SkillList: iSkill[] = [
   {
     link: "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/",
     name: "JavaScript",
-    percentage: 85,
+    percentage: 92,
   },
   {
     link: "https://www.typescriptlang.org/",
     name: "TypeScript",
-    percentage: 85,
+    percentage: 90,
   },
 
   {
     link: "https://reactjs.org/",
     name: "React.Js",
-    percentage: 80,
+    percentage: 93,
   },
   {
     link: "https://nextjs.org/",
     name: "Next.Js",
-    percentage: 85,
+    percentage: 95,
   },
   {
     link: "https://nodejs.org/en/",
     name: "Node.Js",
-    percentage: 80,
+    percentage: 90,
   },
   {
     link: "https://www.w3.org/html/",
     name: "HTML",
-    percentage: 90,
+    percentage: 98,
   },
   {
     link: "https://www.w3.org/Style/CSS/Overview.en.html",
     name: "CSS",
-    percentage: 75,
+    percentage: 95,
   },
   {
     link: "https://tailwindcss.com/",
     name: "Tailwindcss",
-    percentage: 80,
+    percentage: 86,
   },
   {
-    link: "https://flutter.dev/",
-    name: "flutter",
-    percentage: 65,
+    link: "https://firebase.google.com/",
+    name: "firebase",
+    percentage: 95,
   },
 ];
 
