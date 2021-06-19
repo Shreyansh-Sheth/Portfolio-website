@@ -5,7 +5,7 @@ const projectList: iProjects[] = [
   {
     heading: "Portfolio Website",
     tech: ["Next.js", "Tailwindcss"],
-    link: "https://github.com/Shreyansh-Sheth/quize",
+    link: "https://github.com/Shreyansh-Sheth/Portfolio-website",
     status: "Completed",
     subText: "Static Website For My Portfolio",
   },
