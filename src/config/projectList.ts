@@ -9,13 +9,7 @@ const projectList: iProjects[] = [
     status: "Completed",
     subText: "Static Website For My Portfolio",
   },
-  {
-    heading: "Esports",
-    tech: ["firebase", "Next.js", "TypeScript"],
-    link: "https://github.com/Shreyansh-Sheth/esports.git",
-    subText: "Torunament & Clan Managment Web App",
-    status: "Work In Progress",
-  },
+
   {
     heading: "Quizee",
     tech: ["firebase", "Next.Js", "Typescript"],
