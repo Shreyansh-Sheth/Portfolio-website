@@ -1,4 +1,3 @@
-import { m } from "framer-motion";
 import iProjects from "../interfaces/projects";
 
 const projectList: iProjects[] = [
@@ -22,6 +21,13 @@ const projectList: iProjects[] = [
     tech: ["Node.js", "Express", "Ejs", "Mongodb"],
     link: "https://github.com/Shreyansh-Sheth/ArticleProject",
     subText: "Article Posting Website",
+    status: "Completed",
+  },
+  {
+    heading: "Live Markdown Viewer",
+    tech: ["React.js", "Typescript"],
+    link: "https://github.com/Shreyansh-Sheth/Live-Markdown.git",
+    subText: "Simple Markdown Writer With Live Preview",
     status: "Completed",
   },
   {
