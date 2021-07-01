@@ -4,7 +4,7 @@ import iProjects from "../interfaces/projects";
 const projectList: iProjects[] = [
   {
     heading: "Portfolio Website",
-    tech: ["Next.js", "Tailwindcss"],
+    tech: ["Next.js", "Tailwindcss", "Typescript"],
     link: "https://github.com/Shreyansh-Sheth/Portfolio-website",
     status: "Completed",
     subText: "Static Website For My Portfolio",
@@ -12,7 +12,7 @@ const projectList: iProjects[] = [
 
   {
     heading: "Quizee",
-    tech: ["firebase", "Next.Js", "Typescript"],
+    tech: ["firebase", "Next.Js", "Javascript"],
     link: "https://github.com/Shreyansh-Sheth/quize.git",
     subText: "Online Multiplayer Quiz Game For Project Work At Collage",
     status: "Completed",
@@ -33,7 +33,7 @@ const projectList: iProjects[] = [
   },
   {
     heading: "Todo",
-    tech: ["Recoil", "React"],
+    tech: ["Recoil", "React.js"],
     link: "https://github.com/Shreyansh-Sheth/TODO-Recoil",
     subText: "Easy To Use Offline TODO application with react and recoil",
     status: "Completed",
