@@ -124,6 +124,7 @@ export default function Home() {
                   tech={e.tech}
                   key={idx}
                   status={e.status}
+                  liveLink={e.liveLink}
                 ></ProjectTab>
               );
             })}

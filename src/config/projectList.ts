@@ -2,6 +2,20 @@ import iProjects from "../interfaces/projects";
 
 const projectList: iProjects[] = [
   {
+    heading: "Esports-Manager",
+    tech: [
+      "Next.js",
+      "Tailwindcss",
+      "Typescript",
+      "Google Cloud Storage",
+      "firebase",
+    ],
+    link: "https://github.com/Shreyansh-Sheth/Esports_Manager",
+    liveLink: "https://esports-three.vercel.app/",
+    status: "Completed",
+    subText: "Complete Solution For Organizing And Managing Esports Tournament",
+  },
+  {
     heading: "Portfolio Website",
     tech: ["Next.js", "Tailwindcss", "Typescript"],
     link: "https://github.com/Shreyansh-Sheth/Portfolio-website",
@@ -27,6 +41,7 @@ const projectList: iProjects[] = [
     heading: "Live Markdown Viewer",
     tech: ["React.js", "Typescript"],
     link: "https://github.com/Shreyansh-Sheth/Live-Markdown.git",
+    liveLink: "https://live-markdown-eta.vercel.app/",
     subText: "Simple Markdown Writer With Live Preview",
     status: "Completed",
   },

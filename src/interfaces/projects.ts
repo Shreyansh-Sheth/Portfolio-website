@@ -4,4 +4,5 @@ export default interface iProjects {
   tech: string[];
   link: string;
   status: "Work In Progress" | "Completed";
+  liveLink?: string;
 }

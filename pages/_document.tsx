@@ -94,13 +94,11 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            rel="preload"
-            as="style"
+            rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           />
           <link
-            rel="preload"
-            as="style"
+            rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
           ></link>
         </Head>
