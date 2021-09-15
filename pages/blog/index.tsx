@@ -1,11 +1,13 @@
+import * as contentful from "contentful";
 import Link from "next/link";
-import { iBlogList, iBlogPost } from "../../src/interfaces/blogList";
+import { iBlogListItem, iBlogPost } from "../../src/interfaces/blogList";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
 
-export default function blog({ blogList }: { blogList: iBlogList }) {
+export default function blog({ blogList }: { blogList: iBlogListItem[] }) {
+  console.log(blogList);
   return (
     <>
       <Head>
@@ -33,11 +35,12 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
           <div></div>
           {/*BlogList*/}
           <div>
-            {blogList.blogPosts
-              .sort((a, b) => Date.parse(b.time) - Date.parse(a.time))
+            {blogList
+              //@ts-ignore
+              .sort((a, b) => new Date(b.dateCreated) - new Date(a.dateCreated))
               .map((e, idx) => {
                 return (
-                  <Link href={`/blog/${e.pageId}`} key={idx}>
+                  <Link href={`/blog/${e.slug}`} key={idx}>
                     <div
                       onClick={(e) => {}}
                       key={idx}
@@ -47,7 +50,7 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
                         {e.title}
                       </div>
                       <div className="text-left capitalize font-semibold mr-2 text-sm sm:text-2xl">
-                        {e.subTitle}
+                        {e.subtitle}
                       </div>
                       <div className="text-left text-sm mt-2  break-all">
                         {e.tags.map((e, idx) => {
@@ -75,21 +78,21 @@ export default function blog({ blogList }: { blogList: iBlogList }) {
   );
 }
 
-export const getStaticProps = () => {
-  const folderPath = path.join(process.cwd(), "/src/blogs");
-  const blogList: iBlogList = { blogPosts: [] };
-  fs.readdirSync(folderPath).forEach((file) => {
-    const fileContents = fs.readFileSync(
-      path.join(process.cwd(), "/src/blogs", `${file}`),
-      "utf8"
-    );
-    const { data } = matter(fileContents);
-    blogList.blogPosts.push(data as iBlogPost);
+export const getStaticProps = async () => {
+  const client = contentful.createClient({
+    space: process.env.SPACE,
+    accessToken: process.env.TOKEN,
   });
-
+  const blogListFromCms = (await client.getEntries()).items;
+  const list: iBlogListItem[] = blogListFromCms.map((e) => {
+    return {
+      ...(e.fields as unknown as iBlogListItem),
+      dateCreated: e.sys.createdAt,
+    } as unknown as iBlogListItem;
+  });
   return {
     props: {
-      blogList,
+      blogList: list,
     },
   };
 };

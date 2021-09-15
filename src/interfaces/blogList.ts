@@ -1,16 +1,19 @@
-import { MdxRemote } from "next-mdx-remote/types";
+import { Document } from "@contentful/rich-text-types";
 
-export interface iBlogList {
-  blogPosts: iBlogPost[];
+export interface iBlogListItem {
+  slug: string;
+  title: string;
+  subtitle: string;
+  tags: string[];
+  dateCreated: Date;
+  content: string;
 }
 
 export interface iBlogPost {
-  pageId: string;
-  author: string;
   title: string;
   subTitle: string;
   tags: string[];
-  technologyUsed: string[];
-  time: string;
-  data: MdxRemote.Source;
+  dateCreated: Date;
+
+  content: Document;
 }
