@@ -7,7 +7,6 @@ import matter from "gray-matter";
 import Head from "next/head";
 
 export default function blog({ blogList }: { blogList: iBlogListItem[] }) {
-  console.log(blogList);
   return (
     <>
       <Head>
@@ -53,7 +52,7 @@ export default function blog({ blogList }: { blogList: iBlogListItem[] }) {
                         {e.subtitle}
                       </div>
                       <div className="text-left text-sm mt-2  break-all">
-                        {e.tags.map((e, idx) => {
+                        {e.tags?.map((e, idx) => {
                           return (
                             <span
                               onClick={(c) => {

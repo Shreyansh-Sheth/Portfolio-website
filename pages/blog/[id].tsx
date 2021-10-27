@@ -65,7 +65,8 @@ export default function blogPostPage({ content }: { content: iBlogPost }) {
           </div>
         </div>
         {/* TODO change this */}
-        <article className="bg-gray-700 px-5 py-3 md:mx-16 m-auto rounded-xl prose-blue porse prose-sm lg:prose-lg  text-white ">
+
+        <article className=" mx-auto min-w-full p-5 rounded-sm prose prose-sm sm:prose lg:prose-lg xl:prose-2xl  prose-primary bg-gray-100">
           {documentToReactComponents(content.content)}
           <div className="font-semibold">Author : Shreyansh sheth</div>
         </article>
@@ -97,6 +98,7 @@ export async function getStaticPaths() {
     accessToken: process.env.TOKEN,
   });
   const blogListFromCms = (await client.getEntries()).items;
+
   const paths: string[] = blogListFromCms.map((e) => {
     //@ts-ignore
 
